@@ -1,0 +1,8 @@
+vhdl work "8-bit-wallace-tree-multipier-master/half_adder.vhd"
+vhdl work "8-bit-wallace-tree-multipier-master/full_adder.vhd"
+vhdl work "serial_div_uu/trunk/serial_divide_uu.vhd"
+vhdl work "binary_addsub_16bits.vhd"
+vhdl work "BinaryAddSub-master/binaryAddSub.vhd"
+vhdl work "8-bit-wallace-tree-multipier-master/wallace8.vhd"
+vhdl work "coordinate_calculator.vhd"
+vhdl work "coordinate_calculator_tb.vhd"

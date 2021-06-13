@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity binary_addsub is
+	port
+	(
+		-- Input ports
+		a, b	   : in std_logic_vector(7 downto 0);
+		sub      : in std_logic; -- 1 to subtract
+		carry_in	: in std_logic;
+
+		-- Output ports
+		sum	: out std_logic_vector(8 downto 0)
+		--carry	: out std_logic
+	);
+end binary_addsub;
+
+
+architecture a of binary_addsub is
+
+	signal sum_temp : std_logic_vector (8 downto 0);
+	signal b_temp : std_logic_vector (8 downto 0);
+
+begin
+
+	process (b, sub) is
+	begin
+		if sub = '1' then 
+			b_temp <= ('0' & not b);
+		else 
+			b_temp <= ('0' & b);
+		end if;
+	end process;
+	
+	process(a, b, sub, sum_temp, carry_in)
+	begin
+		sum_temp <= ('0' & a) + b_temp + ("00000000" & carry_in);
+		--carry <= sum_temp(8);
+		sum <= sum_temp(8 downto 0);
+	end process;
+end a;

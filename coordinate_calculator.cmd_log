@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/labs/denklem_odev_proje/coordinate_calculator.xst" -ofn "/home/ise/Desktop/labs/denklem_odev_proje/coordinate_calculator.syr" 
